@@ -16,7 +16,7 @@
             <div class="navbar">
                 <ul>
                     <li>HOME</li>
-                    <li>QUEM SOMOS</li>
+                    <li><a href="#quemsomos">QUEM SOMOS</a></li>
                     <li><a href="./login.html">LOGIN</a></li>
                 </ul>
             </div>
@@ -28,7 +28,7 @@
         <div class="container">
             <p>De uma segunda<br>chance para um<br> cãozinho e ganhe<br> um novo melhor<br> amigo</p>
             <div>
-                <button onclick="cadastrar()"><p>ADOTE</p></button>
+                <button onclick="cadastrar()"><a href="cadastro.html"><p>ADOTE</p></a></button>
                 <img src="../assets/img/pata botão adote.png" width="50px" alt="">
             </div>
         </div>
@@ -36,36 +36,45 @@
 
     <!-- SOCIAL -->
     <div class="social">
-    <div class="content">
-        <div class="slides">
-           <input type="radio" name="slide" id="radio1" checked>
-           <input type="radio" name="slide" id="radio2" checked>
-           <input type="radio" name="slide" id="radio3" checked>
+        <div class="fundo">
+            <video src="../assets/img/videoplayback.mp4" preload="auto" controls autoplay></video>
+        </div>
+    </div>
 
-                <div class="slide s1">
-                <img src="../assets/img/carrosel 1.png"  alt="">
-                </div>
-                <div class="slide">
-                <img src="../assets/img/carrosel 2.png" alt="">
-                </div>
-                <div class="slide">
-                <img src="../assets/img/carrosel 3.png" alt="">
+    <!-- Quem somos -->
+    <div class="quemsomos" id="quemsomos">
+        <div class="descricao">
+            <img src="../assets/img/quem somos.png" alt="">
+            <p>QUEM SOMOS</p>
+            <div class="texto">
+                <p>Pensando na quantidade de cães que hoje vivem em abrigos ou ONGS esperando uma familia ou apenas um dono para cuidar deles foi assim que pensamos no site ADOCÃO.<br><br>
+
+                O ADOCÃO é um site, desenvolvido e pensando para cães, pensando em dar tratamento adequado e integrá-los a famílias que lhes deem amor, carinho e uma vida melhor.<br><br>
+
+                Não só para os própios cães, mas também para pessoas, hoje os cachorros servem para ajudar nas terapias e ajudas conta a depressão e anciedade, assim fazendo com que os donos tenhos um amigo do seu lado para te dar carinho e para cuidar, uma vez que cuidando a pessoa mantém a cabeça ocupada fazendo com que os sintomas passem ou sejam "esquecidos"
+                .</p>
+                <div class="gif">
+                    <img src="../assets/img/quem somos2.gif" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="navigation">
-        <label class="bar" for="slide1"></label>
-        <label class="bar" for="slide2"></label>
-        <label class="bar" for="slide3"></label>
-    </div>
-
 <!-- FOOTER -->
-<!-- <div class="footer">
+<div class="footer">
     <div class="container">
         <p>Desenvolvido pelo melhor SPTecher - &copy; Copyright</p>
     </div>
-</div> -->
+    <div class="logo"> 
+        <img src="../assets/img/pata-de-cachorro-em-uma-casa.png" alt=""> <p> ADOCÃO</p>
+    </div>
+    <div class="informa">
+        <h3>Contato</h3>
+        <img src="src/img/facebook.png" alt="">
+        <img src="src/img/instagram.png" alt="">
+        <img src="src/img/linkedin.png" alt="">
+        <img src="src/img/o-email.png" alt="">
+    </div>
+</div>
 </body>
 </html>

@@ -46,6 +46,7 @@ li {
     justify-content: space-between;
 }
 
+/* LOGIN */
 .login {
     position: absolute;
     width: 92.6vw;
@@ -53,10 +54,14 @@ li {
     left: 0px;
     top: 80px;
 }
+.login img{
+    height: 88.2vh;
+    width: 107.9%;
+}
 
 .texto p {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 78%;
     font-size: 300%;
     font-family: 'Source Serif Pro';
@@ -67,7 +72,7 @@ li {
     color: #ffffff;
     margin: 15px 0;
     position: absolute;
-    top: 260%;
+    top: 240%;
     left: 79%;
     font-size: x-large;
     font-family: 'Source Serif Pro';
@@ -79,7 +84,7 @@ li {
     border: 3px solid #cf7723;
     border-radius: 50px;
     position: absolute;
-    top: 300%;
+    top: 280%;
     left: 78%;
     cursor: pointer;    
     transition: .4s;
@@ -90,7 +95,7 @@ li {
     color: #ffffff;
     margin: 15px 0;
     position: absolute;
-    top: 370%;
+    top: 350%;
     left: 79%;
     font-size: x-large;
     font-family: 'Source Serif Pro';
@@ -102,7 +107,7 @@ li {
     border: 3px solid #cf7723;
     border-radius: 50px;
     position: absolute;
-    top: 410%;
+    top: 390%;
     left: 78%;
     cursor: pointer;    
     transition: .4s;
@@ -115,7 +120,7 @@ li {
     border: 3px solid #cf7723;
     border-radius: 50px;
     position: absolute;
-    top: 550%;
+    top: 500%;
     left: 82.5%;
     cursor: pointer;    
     transition: .4s;
@@ -126,10 +131,15 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute;*/
     top: 9%;
     left: 15%;
-    /* cursor: pointer;    
-    transition: .4s; */
+    cursor: pointer;    
+    transition: .4s;
+    color: #ffffff;
+}
+
+.cadastrar p {
+    margin-top: 37%;
+    font-size: large;
     color: #ffffff;
 }

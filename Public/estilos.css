@@ -3,6 +3,7 @@
     margin: 0;
     color: #DDBF42;
     font-family: sans-serif ;
+    /* padding-bottom: 30px; */
 }
 
 .header {
@@ -46,6 +47,7 @@ li {
     justify-content: space-between;
 }
 
+/* BANNER */
 .banner {
     background-image: url("../assets/img/duas.png");
     background-size: cover;
@@ -54,6 +56,7 @@ li {
     height: 100vh;
     left: 0px;
     top: 74px;
+    border-bottom: 2px solid white;
 }
 
 .banner .container p {
@@ -98,74 +101,75 @@ li {
     top: 510px;
 }
 
-.social {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 90vw;
+/* Video */
+.fundo  {
     background-color: #000000;
-    /* background-repeat: no-repeat; */
+    margin-top: 50%;
+    padding: 20%;
 }
 
-.content {
-    height: 520px;
-    width: 1000px;
-    border-radius: 20px;
-    overflow: hidden;
+video {
     position: absolute;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: -15%;
+    margin-left: -18%;
+    height: 60%;
+    box-shadow: 0px 0px 20px 9px #DDBF42;
+    height: 400px;
 }
 
-.navigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-}
-
-.bar {
-    width: 70px;
-    height: 17px;
-    border: 2px solid #fff;
-    margin: 6px;
-    border-radius: 5px;
-    cursor: pointer;    
-    transition: .4s;
-    position: absolute;
-    top: 50px;
-}
-
-.bar:hover {
-    background-color: #cf7723;
-}
-
-input{
-    display: flex;
-}
-
-.slides {
-    display: flex;
-    width: 500%;
-    height: 100%;
-}
-
-.slide {
-    width: 20%;
-    transition: .6s;
-}
-
-.slide img {
+/* QUEM SOMOS */
+.quemsomos {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    margin-top: 0.2%;
 }
 
-#slide1:checked ~ .s1 {
-    margin-left: 0;
+.quemsomos img {
+    width: 100%;
+    opacity: 35%;
 }
 
-#slide2:checked ~ .s1 {
-    margin-left: -20%;
-}   
+.descricao p {
+    margin-top: -4%;
+    margin-left: 20%;
+    font-size: x-large;
+    color: #000000;
+    
+}
+
+.texto {
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 30%;
+    font-size: 10%;
+}
+
+.gif img {
+    width: 50%;
+    margin-top: -37%;
+    margin-left: -40%;
+    opacity: 100%;
+}
+
+/* FOOTER */
+.footer {
+    height: 190px;
+    background-color: #000000be;
+    margin-top: -1%;
+}
+
+.footer .container p {
+    margin-top: 11%;
+    margin-left: 35%;
+}
+
+.footer .logo {
+    position: absolute;
+    margin-top: -12%;
+}
+
+.footer .logo p {
+    margin-top: -40%;
+    margin-left: 75%;
+    font-size: 150%;
+}
