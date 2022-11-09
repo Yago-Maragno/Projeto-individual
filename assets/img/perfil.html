@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o chartJS</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="icon" type="imagem/png" href="../src/img/icon.png" />
+    <script src="../js/funcoes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="janela">
+    <div class="header-left">
+      <h1>Grand Coffee</h1>
+
+      <img src="../src/img/user.png" class="userimg">
+      <div class="hello">
+        <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+      </div>
+
+      <div class="btn-nav-white">
+        <img src="../src/img/home.png" class="img">
+        <a href="">
+          <h3>Perfil</h3>
+          </a>
+      </div>
+
+      <div class="btn-nav-white">
+        <img src="../src/img/setor.png" class="img">
+        <a href="">
+          <h3>Setores da Plantação</h3>
+          </a>
+      </div>
+
+      <div class="btn-nav-white">
+        <img src="../src/img/graf.png" class="img">
+        <a href="./graph.html">
+            <h3>Gráficos</h3>
+        </a>
+    </div>
+
+      <div class="btn-logout" onclick="limparSessao()">
+        <img src="../src/img/logout.png" width="200px" alt="">
+          
+      </div>
+
+    </div>
+  </div>
+
+<div class="janela">
+  <div class="cards">
+      <h2>ADOCÃO</h2>
+      <h3>Lista de doação:</h3>
+    </div>
+</div>
+
+<div class="cards-setor">
+  <div class="container">
+    <div class="cards1">
+      <img src="../img/adoção1.jpg" width="200px" alt="">
+      <div class="temperatura">
+        <p id="temp_setor1"></p>
+      </div>
+    </div>
+    
+    <div class="cards2">
+      <img src="../img/adoção2.jpg" width="200px" alt="">
+      <div class="temperatura">
+        <p id="temp_setor2"></p>
+      </div>
+    </div>
+
+    <div class="cards3">
+      <img src="../img/adoção3.jpg" width="200px" alt="">
+      <div class="temperatura">
+        <p id="temp_setor3"></p>
+      </div>
+    </div>
+
+    <div class="cards4">
+        <img src="../img/adoção4.jpg" width="200px" alt="">
+        <div class="temperatura">
+          <p id="temp_setor3"></p>
+        </div>
+      </div>
+
+      <div class="cards5">
+        <img src="../img/adoção5.jpg" width="200px" alt="">
+        <div class="temperatura">
+          <p id="temp_setor3"></p>
+        </div>
+      </div>
+
+      <div class="cards6">
+        <img src="../img/adoção6.jpeg" width="200px" alt="">
+        <div class="temperatura">
+          <p id="temp_setor3"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+    
+ </html>
+ <script>
+
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
+ </script>
