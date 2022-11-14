@@ -133,7 +133,7 @@ body{
     color: #000000;
     font-size: 40px;
     margin-top: 8%;
-    margin-left: -15%; 
+    margin-left: -15%;  
 }
 
 .cards-setor{
@@ -156,8 +156,8 @@ body{
     width: 80%;
     
 }
-
-.cards1, .cards2, .cards3, .cards4, .cards5, .cards6{
+    
+.cards1, .cards2, .cards3, .cards4, .cards5, .cards6, .cards7, .cards8{
     margin: 2%;
     width: 30%;
     height: 50%;
@@ -166,37 +166,59 @@ body{
     display: flex;
     text-align: center;
     height: 300px;
-    justify-content: right;
+    justify-content: center;
     background-color: #47464650;
     font-size: 20px;
     border-radius: 2px;
 }
 
-.cards-setor p {
-    margin: 0;
-    font-size: 50px;
+.cards-setor ul {
+    list-style: none;
+    padding: 15px;
+    font-size: 20px;
     font-weight: lighter;
     text-align: left;
-    margin-left: -10%;
+    width: 100%;
+    margin-left: 15%;
+    margin-top: -10%;
+}
+
+.cards-setor li {
+    list-style: none;
+    padding: 15px;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: left;
+    width: 100%;
+    margin-left: 25%;
+    margin-top: -10%;
+}
+
+.cards-setor p {
+    padding: 15px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: left;
+    width: 100%;
+    margin-left: -12%;
+    margin-top: -10%;
 }
 
 .cards-setor img {
     position: absolute;
     font-size: 22px;
     margin-top: -2.6%;
-    margin-left: -12.6%;
-}
-.cards-setor h5{
-    font-weight: lighter;
-    text-align: right;
-    margin-right: 15px;
-    margin-top: -20px;
+    margin-left: -7.5%;
 }
 
-.temperatura{
-  margin: 5px;
-  margin-left: 20px;
-  width: 75%;
+.cards1:hover {
+    height: 40vh;
+    transition: 5.s;
+    justify-content: space-around;
 }
+
+
 
 

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estatistica.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex;">
+    <div class="janela">
+        <div class="header-left">
+          <h1>ADOCÃO</h1>
+    
+          <img src="../assets/img/user.png" class="userimg" >
+          <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+          </div>
+    
+          <div class="btn-nav-white">
+            <img src="../assets/img/home.png" class="img">
+            <a href="">
+              <h3><a href="./perfil.html"> Perfil</a></h3>
+              </a>
+          </div>
+    
+          <div class="btn-nav-white">
+            <img src="../assets/img/cães.png" class="img">
+            <a href="">
+              <h3>Cães <a href="./cães.html"></a></h3>
+              </a>
+          </div>
+    
+          <div class="btn-nav-white">
+            <img src="../assets/img/graf.png" class="img">
+            <a href="./graph.html">
+                <h3><a href="./estatisca.html"> Estatisticas </a></h3>
+            </a>
+        </div>
+    
+          <div class="btn-logout" onclick="limparSessao()">
+            <img src="../assets/img/logout.png" width="50px" alt="">
+              
+          </div>
+    
+        </div>
+      </div>
+
+    <div>
+        <canvas id="myChart" style="position: relative; height:40vh; width: 37vw"></canvas>
+      </div>
+      <div>
+        <canvas id="myChart1" style="position: relative; height:40vh; width:37vw"></canvas>
+      </div>
+</body>
+<script>
+    const labels = [
+      '12:00',
+      '13:00',
+      '14:00',
+      '15:00',
+      '16:00',
+      '17:00',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Temperatura',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [30, 29, 28, 25, 22, 23],
+      },
+      {
+        label: 'Umidade',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [80, 82, 80, 85, 80, 83],
+      }
+    ]
+    };
+    const labels1 = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+    ];
+    const data1 = {
+      labels: labels1,
+      datasets: [{
+        label: 'Temperatura',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [22, 24, 27, 23, 20, 18],
+      },
+      {
+        label: 'Umidade',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [90, 89, 93, 87, 88, 82],
+      }
+    ]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+
+    const config1 = {
+      type: 'bar',
+      data: data1,
+      options: {}
+    };
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    const myChart1 = new Chart(
+      document.getElementById('myChart1'),
+      config1
+    );
+  </script>
+</html>
