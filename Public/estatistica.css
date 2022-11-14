@@ -109,3 +109,30 @@ body{
     margin-bottom: 50px;
     cursor: pointer;
 }
+
+.linha {
+    background-color:#6c6c6c33;
+    margin-left: 20%;
+}
+
+.linha p {
+    color: white;
+    font-size:large;
+    margin-left: 15%;
+}
+
+.barra {
+    background-color:#6c6c6c00;
+    margin-top: 24%;
+    margin-left: -37.7%;
+}
+
+.barra p {
+    color: white;
+    font-size:large;
+    margin-left: 15%;
+}
+
+.media {
+    
+}

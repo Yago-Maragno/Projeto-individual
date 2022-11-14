@@ -20,24 +20,15 @@
           </div>
     
           <div class="btn-nav-white">
-            <img src="../assets/img/home.png" class="img">
-            <a href="">
-              <h3><a href="./perfil.html"> Perfil</a></h3>
-              </a>
-          </div>
-    
-          <div class="btn-nav-white">
             <img src="../assets/img/cães.png" class="img">
             <a href="">
-              <h3>Cães <a href="./cães.html"></a></h3>
+              <h3><a href="./cães.html">Cães</a></h3>
               </a>
           </div>
     
           <div class="btn-nav-white">
             <img src="../assets/img/graf.png" class="img">
-            <a href="./graph.html">
                 <h3><a href="./estatisca.html"> Estatisticas </a></h3>
-            </a>
         </div>
     
           <div class="btn-logout" onclick="limparSessao()">
@@ -48,33 +39,39 @@
         </div>
       </div>
 
-    <div>
+    <div class="linha">
+     <p>Quantidade de cães adotados em cada estado: </p>
         <canvas id="myChart" style="position: relative; height:40vh; width: 37vw"></canvas>
       </div>
-      <div>
+      <div class="barra">
+        <p>Quantidade de cães adotados por mês: </p>
         <canvas id="myChart1" style="position: relative; height:40vh; width:37vw"></canvas>
+      </div>
+      <div class="media">
+        <p>Média de Avliação:</p>
+        <canvas id="myChart2" style="position: relative; height:40vh; width:37vw"></canvas>
       </div>
 </body>
 <script>
     const labels = [
-      '12:00',
-      '13:00',
-      '14:00',
-      '15:00',
-      '16:00',
-      '17:00',
+      'São Paulo',
+      'Rio de Janeiro',
+      'Minas Gerais',
+      'Rio Grande do Sul',
+      'Santa Catarina',
+      'Bahia',
     ];
   
     const data = {
       labels: labels,
       datasets: [{
-        label: 'Temperatura',
+        label: 'Adotados',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [30, 29, 28, 25, 22, 23],
+        data: [30, 25, 28, 25, 22, 23],
       },
       {
-        label: 'Umidade',
+        label: 'Para adoção',
         backgroundColor: 'rgb(0, 0, 255)',
         borderColor: 'rgb(0, 0, 255)',
         data: [80, 82, 80, 85, 80, 83],
@@ -92,28 +89,58 @@
     const data1 = {
       labels: labels1,
       datasets: [{
-        label: 'Temperatura',
+        label: 'Cães adotados',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [22, 24, 27, 23, 20, 18],
+        data: [32, 24, 27, 23, 20, 23],
       },
-      {
-        label: 'Umidade',
-        backgroundColor: 'rgb(0, 0, 255)',
-        borderColor: 'rgb(0, 0, 255)',
-        data: [90, 89, 93, 87, 88, 82],
-      }
+      // {
+      //   label: 'Umidade',
+      //   backgroundColor: 'rgb(0, 0, 255)',
+      //   borderColor: 'rgb(0, 0, 255)',
+      //   data: [90, 89, 93, 87, 88, 82],
+      // }
+    ]
+    };
+    const labels2 = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+    ];
+    const data2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'Cães adotados',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [32, 24, 27, 23, 20, 23],
+      },
+      // {
+      //   label: 'Umidade',
+      //   backgroundColor: 'rgb(0, 0, 255)',
+      //   borderColor: 'rgb(0, 0, 255)',
+      //   data: [90, 89, 93, 87, 88, 82],
+      // }
     ]
     };
   
     const config = {
-      type: 'line',
+      type: 'bar',
       data: data,
       options: {}
     };
 
     const config1 = {
-      type: 'bar',
+      type: 'line',
+      data: data1,
+      options: {}
+    };
+
+    const config2 = {
+      type: 'line',
       data: data1,
       options: {}
     };
@@ -127,6 +154,11 @@
     const myChart1 = new Chart(
       document.getElementById('myChart1'),
       config1
+    );
+
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
     );
   </script>
 </html>
