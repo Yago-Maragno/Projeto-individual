@@ -46,35 +46,14 @@ li {
     justify-content: space-between;
 }
 
-body {
+/* body {
     background-image: linear-gradient( to right, rgb(79, 79, 79), rgb(0, 0, 0) );
     /* background: linear-gradient(#cf7723 #000000); */
-}
-.inputs{
-    position: absolute;
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
-    height: 40vh;
-    display: flex;
-    padding: 30px;
-}
-label{
-    margin-top: 100px;
-    color: #ffffff;
-}
-input{
-    margin-left: 40%;
-    margin-top: -10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 3px solid #cf7723;
-    width: 20vh;
-}
-.input{
-    flex-direction: column;
-    display: flex;
-    width: 50vh;
+/* } */ */
+
+label {
+    width: 100%;
+    background-color: aqua;
 }
 
 button {

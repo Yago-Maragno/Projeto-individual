@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
-*{
+* {
     font-family: Play;
 }
 
-body{
+body {
     background-color: #202c39;
     margin: 0 auto;
     padding: 15px;
-    
+
 }
 
 .janela {
@@ -20,7 +20,7 @@ body{
 .header-left a {
     text-decoration: none;
     color: white;
-  }
+}
 
 .header-left {
     position: fixed;
@@ -47,57 +47,57 @@ body{
     justify-content: center;
 }
 
-.userimg{
+.userimg {
 
     width: 92px;
     height: 92px;
     left: 103px;
     top: 135px;
-        
+
 }
-  
+
 .hello h3 {
     color: #e3b062;
     font-weight: 300;
     font-size: 1.2rem;
 }
-  
+
 .hello h3 span {
     font-weight: 800;
 }
 
 .btn-nav {
-  width: 40%;
-  color: white;
-  background-color: #000000;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
+    width: 40%;
+    color: white;
+    background-color: #000000;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
 }
 
 .btn-nav-white {
-  text-align: center;
-  width: 50%;
+    text-align: center;
+    width: 50%;
 }
 
-.header-left .img{
+.header-left .img {
 
     margin-left: -100%;
     margin-bottom: -25%;
 }
 
 .btn-nav-white h3 {
-  color: #CF7726;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 50px;
+    color: #CF7726;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
 .btn-nav h3,
 .btn-logout h3 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .btn-logout {
@@ -105,34 +105,44 @@ body{
     margin: 0;
     padding: 0;
     color: white;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 50px;
     cursor: pointer;
 }
 
 .linha {
-    background-color:#6c6c6c33;
-    margin-left: 20%;
+    position: absolute;
+    background-color: #6c6c6c33;
+    margin-left: 23%;
+    margin-top: 26%;
 }
 
 .linha p {
     color: white;
-    font-size:large;
+    font-size: large;
     margin-left: 15%;
 }
 
 .barra {
-    background-color:#6c6c6c00;
-    margin-top: 24%;
-    margin-left: -37.7%;
+     position: absolute; 
+    background-color: #ff101000;
+    margin-left: 23%;
 }
 
 .barra p {
     color: white;
-    font-size:large;
+    font-size: large;
     margin-left: 15%;
 }
 
 .media {
-    
+    background-color: #6c6c6c00;
+    margin-top: 10%;
+    margin-left: -20%;
+}
+
+.media p {
+    color: white;
+    font-size: large;
+    margin-left: 35%;
 }
