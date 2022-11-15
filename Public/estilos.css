@@ -130,7 +130,7 @@ video {
 .galery .fotos {
     width: 720%;
     animation-name: animacao;
-    animation-duration: 100s;
+    animation-duration: 110s;
     animation-iteration-count: infinite;
 }
 

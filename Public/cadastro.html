@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="cadastro.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="header">
         <div class="container">
@@ -22,59 +24,57 @@
             </div>
         </div>
     </div>
-    
-        <div class="inputs">           
-            <label for="nome">NOME:</label>
-            <input placeholder="Ex:Jose" id="in_nome" type="text">
 
-            <label for="sobreNome">SobreNome:</label>
-            <input placeholder="Ex:Silva dos Santos" id="in_sobreNome" type="text">
-
-            <label for="email">E-mail:</label>
-            <input placeholder="Ex:josesilva@gmail.com" id="in_email" type="email">
-            
-            <label for="cpf">CPF:</label>
-            <input placeholder="Ex:11122233344" id="in_cpf" type="text">
-
-            <label for="gr">RG:</label>
-            <input placeholder="Ex:112223334" id="in_rg" type="text">
-
-            <label for="logradouro">LOGRADOURO:</label>
-            <input placeholder="Ex:Rua Laddock Lobo" id="in_logradouro" type="text">
-            
-            <label for="bairro">BAIRRO:</label>
-            <input placeholder="Ex:Jardim Paulista" id="in_bairro" type="text">
-
-            <label for="numero">NUMERO:</label>
-            <input placeholder="Ex:111" id="in_numero" type="number">
-
-            <label for="complemento">COMPLEMENTO:</label>
-            <input placeholder="Ex:Casa 2" id="in_complemento" type="text">
-                      
-            <label for="senha">SENHA:</label>
-            <input placeholder="Ex:********" id="in_senha" type="password">
-                
-            <label for="confirmação">CONFIRMAÇÃO DE SENHA:</label>
-            <input placeholder="Ex:********" id="in_confirmacao" type="password">
+    <div class="cadastro">
+        <div class="inputs">
+            <ul>
+                <li> <label for="nome">NOME:</label>
+                    <input placeholder="Ex:Jose" id="in_nome" type="text">
+                </li>
+                <li><label for="sobreNome">SobreNome:</label>
+                    <input placeholder="Ex:Silva dos Santos" id="in_sobreNome" type="text">
+                </li>
+                <li> <label for="email">E-mail:</label>
+                    <input placeholder="Ex:josesilva@gmail.com" id="in_email" type="email">
+                </li>
+                <li><label for="cpf">CPF:</label>
+                    <input placeholder="Ex:11122233344" id="in_cpf" type="text">
+                </li>
+                <li><label for="gr">RG:</label>
+                    <input placeholder="Ex:112223334" id="in_rg" type="text">
+                </li>
+                <li> <label for="logradouro">LOGRADOURO:</label>
+                    <input placeholder="Ex:Rua Laddock Lobo" id="in_logradouro" type="text">
+                </li>
+                <li> <label for="bairro">BAIRRO:</label>
+                    <input placeholder="Ex:Jardim Paulista" id="in_bairro" type="text">
+                </li>
+            </ul>
         </div>
-        
-
-        <div class="botao">
-            <button onclick="cadastrar()">Cadastar</button>
-        </div>
-        <div class="pata1">
-            <img src="../assets/img/bicho-de-estimacao.png" alt="">
-        </div>
-        <div class="pata2">
-            <img src="../assets/img/bicho-de-estimacao.png" alt="">
-        </div>
-        <div class="pata3">
-            <img src="../assets/img/bicho-de-estimacao.png" alt="">
-        </div>
-        <div class="pata4">
-            <img src="../assets/img/bicho-de-estimacao.png" alt="">
+        <div class="inputs2">
+            <ul>
+                <li><label for="numero">NUMERO:</label>
+                    <input placeholder="Ex:111" id="in_numero" type="number">
+                </li>
+                <li> <label for="complemento">COMPLEMENTO:</label>
+                    <input placeholder="Ex:Casa 2" id="in_complemento" type="text">
+                </li>
+                <li><label for="senha">SENHA:</label>
+                    <input placeholder="Ex:********" id="in_senha" type="password">
+                </li>
+                <li><label for="confirmação">CONFIRMAÇÃO:</label>
+                    <input placeholder="Ex:********" id="in_confirmacao" type="password">
+                </li>
+            </ul>
         </div>
     </div>
-</div>
+
+    <div class="botao">
+        <button onclick="cadastrar()"><p>Cadastrar</p></button>
+    </div>
+    <div class="imagem">
+        <img src="../assets/img/cadastro.png" width="120%" alt="">
+    </div>
 </body>
+
 </html>
