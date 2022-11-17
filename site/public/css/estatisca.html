@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estatistica.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex;">
+    <div class="janela">
+        <div class="header-left">
+          <h1>ADOCÃO</h1>
+    
+          <img src="../assets/img/user.png" class="userimg" >
+          <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+          </div>
+    
+          <div class="btn-nav-white">
+            <img src="../assets/img/cães.png" width="50px" class="img">
+            <a href="">
+              <h3><a href="./cães.html">Cães</a></h3>
+              </a>
+          </div>
+    
+          <div class="btn-nav-white">
+            <img src="../assets/img/graf.png" class="img">
+                <h3><a href="./estatisca.html"> Estatisticas </a></h3>
+        </div>
+    
+          <div class="btn-logout" onclick="limparSessao()">
+            <img src="../assets/img/logout.png" width="50px" alt="">
+              
+          </div>
+    
+        </div>
+      </div>
+
+    <div class="barra">
+     <p>Quantidade de cães adotados em cada estado: </p>
+        <canvas id="myChart" style="position: relative; height:40vh; width: 37vw"></canvas>
+      </div>
+        <div class="linha">
+          <p>Quantidade de cães adotados por mês: </p>
+          <canvas id="myChart1" style="position: relative; height:32vh; width:37vw"></canvas>
+      </div>
+          <div class="media">
+            <p>Média de Avliação:</p>
+            <canvas id="myChart2" style="position: relative; height:40vh; width:37vw"></canvas>
+      </div>
+</body>
+<script>
+    const labels = [
+      'São Paulo',
+      'Rio de Janeiro',
+      'Minas Gerais',
+      'Rio Grande do Sul',
+      'Santa Catarina',
+      'Bahia',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Adotados',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [30, 25, 28, 25, 22, 23],
+      },
+      {
+        label: 'Para adoção',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [80, 82, 80, 85, 80, 83],
+      }
+    ]
+    };
+    const labels1 = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+    ];
+    const data1 = {
+      labels: labels1,
+      datasets: [{
+        label: 'Cães adotados',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [32, 24, 27, 23, 20, 23],
+      },
+      // {
+      //   label: 'Umidade',
+      //   backgroundColor: 'rgb(0, 0, 255)',
+      //   borderColor: 'rgb(0, 0, 255)',
+      //   data: [90, 89, 93, 87, 88, 82],
+      // }
+    ]
+    };
+    const labels2 = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+    ];
+    const data2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'Cães adotados',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [32, 24, 27, 23, 20, 23],
+      },
+      // {
+      //   label: 'Umidade',
+      //   backgroundColor: 'rgb(0, 0, 255)',
+      //   borderColor: 'rgb(0, 0, 255)',
+      //   data: [90, 89, 93, 87, 88, 82],
+      // }
+    ]
+    };
+  
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {}
+    };
+
+    const config1 = {
+      type: 'line',
+      data: data1,
+      options: {}
+    };
+
+    const config2 = {
+      type: 'line',
+      data: data1,
+      options: {}
+    };
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    const myChart1 = new Chart(
+      document.getElementById('myChart1'),
+      config1
+    );
+
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+  </script>
+</html>
