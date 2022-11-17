@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="../assets/img/pata-de-cachorro-em-uma-casa.png" alt="">
+            <h1>ADOCÃO</h1>
+            <div class="navbar">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#quemsomos"> QUEM SOMOS</a></li>
+                    <li><a href="./login.html">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cadastro">
+        <div class="inputs">
+            <ul>
+                <li> <label for="nome">NOME:</label>
+                    <input placeholder="Ex:Jose" id="in_nome" type="text">
+                </li>
+                <li><label for="sobreNome">SobreNome:</label>
+                    <input placeholder="Ex:Silva dos Santos" id="in_sobreNome" type="text">
+                </li>
+                <li> <label for="email">E-mail:</label>
+                    <input placeholder="Ex:josesilva@gmail.com" id="in_email" type="email">
+                </li>
+                <li><label for="cpf">CPF:</label>
+                    <input placeholder="Ex:11122233344" id="in_cpf" type="text">
+                </li>
+                <li><label for="gr">RG:</label>
+                    <input placeholder="Ex:112223334" id="in_rg" type="text">
+                </li>
+                <li> <label for="logradouro">LOGRADOURO:</label>
+                    <input placeholder="Ex:Rua Laddock Lobo" id="in_logradouro" type="text">
+                </li>
+                <li> <label for="bairro">BAIRRO:</label>
+                    <input placeholder="Ex:Jardim Paulista" id="in_bairro" type="text">
+                </li>
+            </ul>
+        </div>
+        <div class="inputs2">
+            <ul>
+                <li><label for="numero">NUMERO:</label>
+                    <input placeholder="Ex:111" id="in_numero" type="number">
+                </li>
+                <li> <label for="complemento">COMPLEMENTO:</label>
+                    <input placeholder="Ex:Casa 2" id="in_complemento" type="text">
+                </li>
+                <li><label for="senha">SENHA:</label>
+                    <input placeholder="Ex:********" id="in_senha" type="password">
+                </li>
+                <li><label for="confirmação">CONFIRMAÇÃO:</label>
+                    <input placeholder="Ex:********" id="in_confirmacao" type="password">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="botao">
+        <button onclick="cadastrar()"><p>Cadastrar</p></button>
+    </div>
+    <div class="imagem">
+        <img src="./assets/img/cadastro.png" width="120%" alt="">
+    </div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = in_nome.value;
+        var sobrenomeVar = in_sobreNome.value;
+        var emailVar = in_email.value;
+        var cpfVar = in_cpf.value;
+        var rgVar = in_rg.value;
+        var logradouroVar = in_logradouro.value;
+        var bairroVar = in_bairro.value;
+        var numeroVar = in_numero.value;
+        var complementoVar = in_complemento.value;
+        var senhaVar = in_senha.value;
+        var confirmacaoSenhaVar = in_confirmacao.value;
+
+        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" ||cpfVar == "" ||rgVar == "" || logradouroVar == "" || bairroVar == "" || numeroVar == "" || complementoVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                sobreNomeServer: sobrenomeVar,
+                emailServer: emailVar,
+                cpfServer: cpfVar,
+                rgServer: rgVar,
+                logradouroServer: logradouroVar,
+                bairroServer: bairroVar,
+                numeroServer: numeroVar,
+                complementoServer: complementoVar,
+                senhaServer: senhaVar,
+                confimacaosenhaServer: confirmacaoSenhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        // cardErro.style.display = "none"
+    }
+
+</script>

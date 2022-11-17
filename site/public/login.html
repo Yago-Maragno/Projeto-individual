@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./estilos.css"> -->
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="./assets/img/pata-de-cachorro-em-uma-casa.png" alt="">
+            <h1>ADOCÃO</h1>
+            <div class="navbar">
+                <ul>
+                    <li><a href="./index.html"> HOME</a></li>
+                    <li><a href="#quemsomos"> QUEM SOMOS</a></li>
+                    <li><a href="./login.html">ADOTE</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="login">
+        <img src="./assets/img/login.png" width="106.8%" height="750%" alt="">
+        <div class="texto">
+            <p>A um passo<br> da felicidade!</p>
+            <div class="email">
+                <label for="email">E-mail:</label>
+                <input placeholder="Ex:josesilva@gmail.com" id="in_email" type="email">
+                <div class="senha">
+                    <label for="senha">Senha:</label>
+                <input placeholder="*********" id="in_senha" type="password">
+                    <div class="botao">
+                        <button onclick="entrar()"><p>Logar</p></button>
+                    </div>
+                    <div class="cadastrar">
+                        <p><a href="../Public/cadastro.html"> Não possui cadastro? cadastre-se</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function entrar() {
+        // aguardar();
+
+        var emailVar = in_email.value;
+        var senhaVar = in_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./cães.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        // cardErro.style.display = "none"
+    }
+
+</script>
