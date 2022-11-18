@@ -172,6 +172,10 @@ body{
     border-radius: 2px;
 }
 
+.cards-setor img {
+    margin-left: -60%;
+}
+
 .cards-setor ul {
     list-style: none;
     padding: 15px;
@@ -181,8 +185,7 @@ body{
     width: 100%;
     margin-left: 15%;
     margin-top: -10%;
-<<<<<<< HEAD:site/public/css/cães.css
-=======
+
 }
 
 .cards-setor li {
@@ -206,7 +209,6 @@ body{
     width: 100%;
     margin-left: -12%;
     margin-top: -10%;
->>>>>>> 429aa25150e3e98d2400533d388a37f30191eb52:Public/cães.css
 }
 
 .cards-setor li {
@@ -236,16 +238,13 @@ body{
     position: absolute;
     font-size: 22px;
     margin-top: -2.6%;
-<<<<<<< HEAD:site/public/css/cães.css
     margin-left: -15%;
-=======
     margin-left: -7.5%;
->>>>>>> 429aa25150e3e98d2400533d388a37f30191eb52:Public/cães.css
 }
 
 .cards1:hover {
     height: 40vh;
-    transition: 5.s;
+    transition: 5s;
     justify-content: space-around;
 }
 

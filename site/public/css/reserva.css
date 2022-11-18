@@ -1,0 +1,55 @@
+.caixa {
+    width: 60vw;
+    height: 50vh; 
+    background-color: rgb(255, 255, 255);
+    margin-left: 18%;
+    margin-top: 10%;
+    border: 2px solid black;
+}
+
+.texto {
+    margin-top: -2%;
+    width: 60vw;
+    height: 5vh;
+    background-color: black;
+}
+
+.texto p {
+    color: white;
+    font-size: larger;
+    text-align: center;
+}
+
+.data {
+    width:20vw;
+    height: 45vh;
+    margin-top: -2.1%;
+    background-color: rgb(255, 255, 255);
+}
+
+.data p {
+    font-size: larger;
+    margin-left: 5%;
+}
+
+.data input {
+    margin-left: 6%;
+}
+
+.hora {
+    width:20vw;
+    height: 44.9vh;
+    margin-top: -36.6%;
+    background-color:rgb(255, 255, 255);
+    margin-left: 33.3%;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.mensagem {
+    background-color: rgb(255, 255, 255);
+    width: 19.9vw;
+    height: 45vh;
+    margin-left: 20%;
+    margin-top: -36.55%;
+    margin-left: 67%;
+}
