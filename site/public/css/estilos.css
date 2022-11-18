@@ -121,10 +121,6 @@ video {
     width: 550px;
     height: 310px;
     background-color: #6d6d6d;
-<<<<<<< HEAD:site/public/css/estilos.css
-=======
-    /* border: 5px solid #000000; */
->>>>>>> 429aa25150e3e98d2400533d388a37f30191eb52:Public/estilos.css
     margin-top: -30%;
     margin-left: 60%;
     overflow: hidden;
@@ -156,11 +152,8 @@ video {
     75% {margin-left: -505%;}
     80% {margin-left: -505%;}
     90% {margin-left: -606%;}
-<<<<<<< HEAD:site/public/css/estilos.css
     100% {margin-left: -606%;}
-=======
     100% {margin-left: -605%;}
->>>>>>> 429aa25150e3e98d2400533d388a37f30191eb52:Public/estilos.css
 }
 
 /* QUEM SOMOS */
