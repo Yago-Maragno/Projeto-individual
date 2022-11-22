@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Implementando o chartJS</title>
     <link rel="stylesheet" href="./css/cães.css">
+    <link rel="stylesheet" href="./css/reserva.css">
     <link rel="icon" type="imagem/png" href="../src/img/icon.png" />
     <script src="../js/funcoes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+<!-- MODAL -->
+  <div class="fundo" id="fundo">
+    <div class="caixa">
+        <div class="texto">
+            <h1>DEFINA UMA DATA E HORA PARA VISITAR O SEU CACHORRO FAVORITO: </h1>
+          </div>
+            <div class="corpoTexto">
+
+              <h3>Endereço: R. Cel. João Corrêa, 394 - Bairro Belvedere, Gramado - RS, 95670-000 <br><br>
+                Aberto das 08:00 às 16:00<br><br>
+                Telefone: +55 11984710509</h3>
+              <h2><a href=""> Avalie agora nosso site - clique aqui</a></h2>
+        </div>
+    </div>
+    <button onclick="sair()"></button>
+</div>
+<!-- FIM MODAL -->
 
   <div class="janela">
     <div class="header-left">
@@ -53,7 +71,7 @@
 <div class="cards-setor">
   <div class="container" id="caes">
     <div class="cards1">
-     <a href="./reserva.html"> <img src="./assets/img/adoção1.jpg" width="200px" height="150px" alt="" ></a>
+     <button onclick="mostrar()"></button>
       <div class="temperatura">
          <ul>
             <li>Nome: Pimpim</li>
@@ -66,7 +84,7 @@
     </div>
     
     <div class="cards2">
-      <a href="./reserva.html"><img src="./assets/img/adoção2.jpg" width="200px" height="150px"alt=""></a>
+    <button onclick="mostrar()"></button>
       <div class="temperatura">
          <ul>
             <li>Nome: Pimpim</li>
@@ -79,7 +97,7 @@
     </div>
 
     <div class="cards3">
-      <a href=""><img src="./assets/img/adoção3.jpg" width="200px" height="150px"alt=""></a>
+    <button onclick="mostrar()"></button>
      
       <div class="temperatura">
          <ul>
@@ -93,7 +111,7 @@
     </div>
 
     <div class="cards4">
-        <a href=""><img src="./assets/img/adoção4.jpg" width="200px" height="150px"alt=""></a>
+        <button onclick="mostrar()"></button>
        
         <div class="temperatura">
            <ul>
@@ -107,7 +125,7 @@
       </div>
 
       <div class="cards5">
-        <a href=""><img src="./assets/img/adoção5.jpg" width="200px" height="150px"alt=""></a>
+        <button onclick="mostrar()"></button>
         
         <div class="temperatura">
            <ul>
@@ -121,7 +139,7 @@
       </div>
 
       <div class="cards6">
-        <a href=""><img src="./assets/img/adoção6.jpeg" width="200px" height="150px"alt=""></a>
+        <button onclick="mostrar()"></button>
        
         <div class="temperatura">
           <ul>
@@ -135,7 +153,7 @@
 
       </div>
       <div class="cards7">
-        <a href=""><img src="./assets/img/adoção7.png" width="200px" height="150px"alt=""></a>
+        <button onclick="mostrar()"></button>
         
         <div class="temperatura">
           <ul>
@@ -150,7 +168,7 @@
       </div>
   
       <div class="cards8">
-        <a href=""><img src="./assets/img/adoção8.png" width="200px" height="150px"alt=""></a>
+        <button onclick="mostrar()"></button>
         <div class="temperatura">
           <ul>
             <li>Nome: Pimpim</li>
@@ -170,4 +188,11 @@
  </html>
  <script>
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;  
+
+
+  function mostrar(){
+    document.getElementById('fundo').style.display = "flex"
+    document.getElementById('fundo').style.position = "fixed"
+    
+  }
 </script>

@@ -42,9 +42,10 @@ ul {
     list-style: none;
 }
 
-li {
+li a {
     color: #DDBF42;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 /* BANNER */

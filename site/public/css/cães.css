@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
-*{
+* {
     font-family: Play;
 }
 
-body{
+body {
     background-color: #202c39;
     margin: 0 auto;
     padding: 15px;
-    
+
 }
 
 .janela {
@@ -20,13 +20,13 @@ body{
 .header-left a {
     text-decoration: none;
     color: white;
-  }
+}
 
 .header-left {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1;
     height: 100vh;
     width: 20%;
     display: flex;
@@ -47,57 +47,57 @@ body{
     justify-content: center;
 }
 
-.userimg{
+.userimg {
 
     width: 92px;
     height: 92px;
     left: 103px;
     top: 135px;
-        
+
 }
-  
+
 .hello h3 {
     color: #e3b062;
     font-weight: 300;
     font-size: 1.2rem;
 }
-  
+
 .hello h3 span {
     font-weight: 800;
 }
 
 .btn-nav {
-  width: 40%;
-  color: white;
-  background-color: #000000;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
+    width: 40%;
+    color: white;
+    background-color: #000000;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
 }
 
 .btn-nav-white {
-  text-align: center;
-  width: 50%;
+    text-align: center;
+    width: 50%;
 }
 
-.header-left .img{
+.header-left .img {
 
     margin-left: -100%;
     margin-bottom: -25%;
 }
 
 .btn-nav-white h3 {
-  color: #CF7726;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 50px;
+    color: #CF7726;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
 .btn-nav h3,
 .btn-logout h3 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .btn-logout {
@@ -105,7 +105,7 @@ body{
     margin: 0;
     padding: 0;
     color: white;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 50px;
     cursor: pointer;
 }
@@ -114,9 +114,9 @@ body{
     display: flex;
     width: 88vw;
     flex-direction: column;
-}  
-  
-.cards{
+}
+
+.cards {
     display: flex;
     justify-content: center;
     margin-left: -15%;
@@ -125,7 +125,7 @@ body{
 .cards h2 {
     color: #cf7723;
     font-size: 40px;
-    margin-left:  -25%;
+    margin-left: -25%;
     position: absolute;
 }
 
@@ -133,10 +133,10 @@ body{
     color: #000000;
     font-size: 40px;
     margin-top: 8%;
-    margin-left: -15%;  
+    margin-left: -15%;
 }
 
-.cards-setor{
+.cards-setor {
     margin-left: 8%;
     display: flex;
     flex-wrap: wrap;
@@ -144,20 +144,27 @@ body{
     height: 450px;
     width: 98.5%;
     align-items: center;
-    color: white;   
+    color: white;
 }
 
-.cards-setor .container{
+.cards-setor .container {
     display: flex;
     /* justify-content: space-around; */
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 10%;
     width: 80%;
-    
+
 }
-    
-.cards1, .cards2, .cards3, .cards4, .cards5, .cards6, .cards7, .cards8{
+
+.cards1,
+.cards2,
+.cards3,
+.cards4,
+.cards5,
+.cards6,
+.cards7,
+.cards8 {
     margin: 2%;
     width: 30%;
     height: 50%;
@@ -234,20 +241,57 @@ body{
     margin-top: -10%;
 }
 
-.cards-setor  a{
+button:hover{
+    cursor: pointer;
+}
+
+.cards-setor button {
     position: absolute;
     font-size: 22px;
     margin-top: -2.6%;
     margin-left: -15%;
-    margin-left: -7.5%;
+    height: 150px;
+    width: 200px;
+    background-image: url(../assets/img/adoção1.jpg);
+    background-size: cover;
 }
 
-.cards1:hover {
-    height: 40vh;
-    transition: 5s;
-    justify-content: space-around;
+.cards1 button {
+    background-image: url(../assets/img/adoção1.jpg);
+    background-size: cover;
 }
 
+.cards2 button {
+    background-image: url(../assets/img/adoção2.jpg);
+    background-size: cover;
+}
 
-
-
+.cards3 button {
+    background-image: url(../assets/img/adoção3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.cards4 button {
+    background-image: url(../assets/img/adoção4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards5 button {
+    background-image: url(../assets/img/adoção5.jpg);
+    background-size: cover;
+}
+.cards6 button {
+    background-image: url(../assets/img/adoção6.jpeg);
+    background-size: cover;
+}
+.cards7 button {
+    background-image: url(../assets/img/adoção7.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards8 button {
+    background-image: url(../assets/img/adoção8.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
