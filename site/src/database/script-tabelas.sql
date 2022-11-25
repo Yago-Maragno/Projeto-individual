@@ -20,6 +20,26 @@ create table usuario (
     senha varchar(45)
 );
 
+create table cachorro (
+idCachorro int primary key auto_increment,
+nome varchar(45),
+idade int,
+sexo char(1),
+raca varchar(45),
+descricao varchar(80),
+fkUsuario int,
+foreign key(fkUsuario) references usuario(idPessoa)
+) auto_increment=001;
+
+CREATE TABLE aviso (
+	id INT AUTO_INCREMENT,
+	titulo VARCHAR(100),
+	descricao VARCHAR(150),
+	fk_usuario INT,
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id),
+    primary key (id, fk_usuario)
+);
+
 /*
 comandos para criar usuário em banco de dados azure, sqlserver,
 com permissão de insert + update + delete + select

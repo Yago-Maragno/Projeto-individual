@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idAvaliacao, limite_linhas) {
+function buscarUltimasMedidas(id, limite_linhas) {
 
     instrucaoSql = ''
 
@@ -14,7 +14,7 @@ function buscarUltimasMedidas(idAvaliacao, limite_linhas) {
                     where fk_aquario = ${idAquario}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(idAvaliacao) as Qtd, sum(nota) from avaliacao `;
+        instrucaoSql = `SELECT count(nota)as media FROM aviso;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -24,7 +24,7 @@ function buscarUltimasMedidas(idAvaliacao, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAvaliacao) {
+function buscarMedidasEmTempoReal(id) {
 
     instrucaoSql = ''
 
@@ -38,7 +38,7 @@ function buscarMedidasEmTempoReal(idAvaliacao) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(idAvaliacao) as Qtd, sum(nota) from avaliacao`;
+        instrucaoSql = `select count(id) as Qtd, sum(nota) from aviso`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
