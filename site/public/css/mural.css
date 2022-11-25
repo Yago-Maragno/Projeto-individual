@@ -225,7 +225,7 @@ body {
 
 /* pagina graficos */
 
-.dash-header {
+/* .dash-header {
   background-color: #212124;
 }
 
@@ -242,7 +242,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;*/
-  height: 100vh;
+  /*height: 100vh;
 }
 
 .regua {
@@ -332,9 +332,9 @@ body {
   border-radius: 50px;
   margin-top: 6%;
   /* background-color: #c7c7c7; */
-}
 
-.btns-dash {
+
+/*.btns-dash {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,4 +363,4 @@ body {
   background-color: white;
   margin: 5px;
   border-radius: 3px;
-}
+} */

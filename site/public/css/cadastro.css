@@ -47,14 +47,14 @@ li {
 }
 
  body {
-    background-image: linear-gradient( to right, rgb(249, 249, 249), rgb(126, 120, 120) );
+    background-image: linear-gradient( to right, rgb(97, 183, 205), rgb(0, 0, 0) );
     /* background: linear-gradient(#cf7723 #000000); */
  } 
 
 .cadastro {
     width: 50vw;
     height: 80vh;
-    background-image: linear-gradient( to right, rgba(103, 80, 51, 0.266), rgba(133, 110, 82, 0.621) );
+    background-image: linear-gradient( to right, rgba(255, 255, 255, 0.266), rgba(154, 151, 147, 0.621) );
     /* background-color:rgba(96, 104, 104, 0.107); */
     margin-top: 7%;
     margin-left: 5%;
@@ -151,6 +151,6 @@ li {
 .imagem {
     position: absolute;
     width: 30%;
-    margin-left: 63%;
-    margin-top: -37%;
+    margin-left: 23%;
+    margin-top: -40%;
 }
