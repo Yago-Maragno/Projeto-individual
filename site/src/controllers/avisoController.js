@@ -20,9 +20,9 @@ function listar(req, res) {
 }
 
 function listarPorUsuario(req, res) {
-    var idUsuario = req.params.idUsuario;
+    var idPessoa = req.params.idPessoa;
 
-    avisoModel.listarPorUsuario(idUsuario)
+    avisoModel.listarPorUsuario(idPessoa)
         .then(
             function (resultado) {
                 if (resultado.length > 0) {
@@ -68,7 +68,7 @@ function pesquisarDescricao(req, res) {
 function publicar(req, res) {
     var nota = req.body.nota;
     var descricao = req.body.descricao;
-    var idPessoa = req.params.idPessoa;
+    var idPessoa = req.body.idPessoa;
 
     if (nota == undefined) {
         res.status(400).send("A nota está indefinida!");
@@ -95,9 +95,9 @@ function publicar(req, res) {
 
 function editar(req, res) {
     var novaDescricao = req.body.descricao;
-    var idAviso = req.params.idAviso;
+    var id = req.params.id;
 
-    avisoModel.editar(novaDescricao, idAviso)
+    avisoModel.editar(novaDescricao, id)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -114,9 +114,9 @@ function editar(req, res) {
 }
 
 function deletar(req, res) {
-    var idAviso = req.params.idAviso;
+    var id = req.params.id;
 
-    avisoModel.deletar(idAviso)
+    avisoModel.deletar(id)
         .then(
             function (resultado) {
                 res.json(resultado);

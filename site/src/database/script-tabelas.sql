@@ -33,7 +33,7 @@ foreign key(fkUsuario) references usuario(idPessoa)
 
 CREATE TABLE aviso (
 	id INT AUTO_INCREMENT,
-	titulo VARCHAR(100),
+	nota VARCHAR(100),
 	descricao VARCHAR(150),
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id),

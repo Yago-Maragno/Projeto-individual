@@ -73,7 +73,7 @@
         <button onclick="cadastrar()"><p>Cadastrar</p></button>
     </div>
     <div class="imagem">
-        <img src="./assets/img/image-removebg-preview (3).png" width="250%" height="200%" alt="">
+        <img src="./assets/img/image-removebg-preview (3).png" width="150%"  alt="">
     </div>
 </body>
 </html>
@@ -97,11 +97,15 @@
 
         if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" ||cpfVar == "" ||rgVar == "" || logradouroVar == "" || bairroVar == "" || numeroVar == "" || complementoVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             // cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert ("Mensagem de erro para todos os campos em branco");
 
             // finalizarAguardar();
             return false;
         }
+        // else if(confirmacaoSenhaVar != senhaVar) {
+        //     alert("Confirmação de senha não compativel com a senha inserida")
+            
+        // }
         else {
             setInterval(sumirMensagem, 5000)
         }
