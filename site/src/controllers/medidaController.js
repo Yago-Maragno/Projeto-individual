@@ -57,9 +57,6 @@ console.log("ENNNNNNNNNNNNNRRRRRRRREI")
     });
 }
 
-
-
-
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,

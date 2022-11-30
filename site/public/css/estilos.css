@@ -193,31 +193,34 @@ video {
 
 /* FOOTER */
 .footer {
-    height: 200px;
+    height: 250px;
     width: 98.9vw;
     background-color: #000000be;
     margin-top: 0%;
 }
 
+
 .footer .container p {
     margin-top: 10%;
-    margin-left: 35%;
+    margin-left: 40%;
 }
 
 .footer .logo {
     position: absolute; 
     margin-top: -12%;
+    margin-left: 50%;
 }
 
-.footer .logo p {
+.logo p {
     margin-top: 10%;
-    margin-left: 5%;
+    margin-left: -20%;
     font-size: 150%;
 }
 
+
 .informa img {
-        height: 23%;
-        width: 10%;
+        height: 28px;
+        width: 28px;
         padding: 0px 0px 0px 15px;
         margin-left: 15%;
         justify-content:space-around;
