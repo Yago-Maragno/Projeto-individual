@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADOCÃO | Avisos</title>
-    <link rel="stylesheet" href="./css/mural.css">
     <link rel="stylesheet" href="./css/EdiçãoAvisos.css">
     <script src="../js/funcoes.js"></script>
 
@@ -61,16 +60,12 @@
     <div class="avisos">
             <h1>Editar um aviso</h1>
             <div class="div-form">
-                <label>
-                    ID:
-                    <br>
-                    <input id="input_id" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
-                </label>
+                <label>ID:</label><br>
+                <div id="id_aviso"></div>
                 <label>
                     Autor:
                     <br>
-                    <input id="input_nome" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
-                        disabled>
+                    <div id="id_autor"></div>
                 </label>
                 <label>
                     Nota:
@@ -95,11 +90,20 @@
 </html>
 
 <script>
+alert(`${idAviso}`)
 function listarInfosDeUm() {
 console.log("Criar função de trazer informações de post escolhido");
 }
 
 function editar() {
+    var idAviso = sessionStorage.ID_POSTAGEM_EDITANDO;
+    var autor = sessionStorage.ID_PESSOA;
+
+    id_aviso.innerHTML = `${idAviso}`
+    id_autor.innerHTML = `${autor}`
+
+
+
 fetch(`/avisos/editar/${sessionStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
     method: "PUT",
     headers: {
@@ -122,5 +126,7 @@ fetch(`/avisos/editar/${sessionStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
     console.log(`#ERRO: ${resposta}`);
 });
 }
+
+
 
 </script>

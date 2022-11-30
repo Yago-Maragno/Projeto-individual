@@ -8,6 +8,7 @@ function listar() {
             a.nota,
             a.descricao,
             a.fk_usuario,
+            a.valido as validacao,
             u.idPessoa AS idPessoa, 
             u.nome,
             u.email,
@@ -49,6 +50,7 @@ function listarPorUsuario(idPessoa) {
             a.nota,
             a.descricao,
             a.fk_usuario,
+            a.valido as validacao,
             u.idPessoa AS idPessoa,
             u.nome,
             u.email,
@@ -62,10 +64,31 @@ function listarPorUsuario(idPessoa) {
     return database.executar(instrucao);
 }
 
-function publicar(nota, descricao, idPessoa) {
-    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", nota, descricao, idPessoa);
+function validar(idPessoa) {
+    console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        INSERT INTO aviso (nota, descricao, idPessoa) VALUES ('${nota}', '${descricao}', ${idPessoa});
+    SELECT 
+    a.id AS id,
+    a.nota,
+    a.descricao,
+    a.fk_usuario,
+    u.idPessoa AS idPessoa,
+    u.nome,
+    u.email,
+    u.senha
+FROM aviso a
+    INNER JOIN usuario u
+        ON a.fk_usuario = u.idPessoa
+WHERE u.idPessoa = ${idPessoa};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function publicar(nota, descricao, idPessoa, valido) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", nota, descricao, idPessoa, valido);
+    var instrucao = `
+        INSERT INTO aviso (nota, descricao, fk_usuario, valido) VALUES (${nota}, '${descricao}', ${idPessoa}, ${valido});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -95,5 +118,6 @@ module.exports = {
     pesquisarDescricao,
     publicar,
     editar,
-    deletar
+    deletar,
+    validar
 }

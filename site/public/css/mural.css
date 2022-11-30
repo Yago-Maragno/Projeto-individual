@@ -155,7 +155,7 @@ body {
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
-  border: 3px solid #e6005a;
+  border: 3px solid #CF7726;
   background-color: white;
   border-radius: 5px;
   margin-left: 36%;
@@ -170,7 +170,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #000000;
   width: 120px;
   margin-left: 36%;
 }
@@ -184,7 +184,7 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #eb055d;
+  background-color: #000000;
   width: 80px;
 }
 
@@ -195,7 +195,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid #CF7726;
   padding: 20px;
 }
 

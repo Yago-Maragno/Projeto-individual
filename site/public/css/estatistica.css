@@ -120,7 +120,7 @@ body {
 .linha p {
     color: white;
     font-size: large;
-    margin-left: 15%;
+    margin-left: 35%;
 }
 
 .barra {
@@ -138,11 +138,11 @@ body {
 .media {
     background-color: #6c6c6c00;
     margin-top: 10%;
-    margin-left: -20%;
+    margin-left: 40%;
 }
 
 .media p {
     color: white;
     font-size: large;
-    margin-left: 35%;
+    margin-left: 5%;
 }

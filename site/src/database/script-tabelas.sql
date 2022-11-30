@@ -37,7 +37,8 @@ CREATE TABLE aviso (
 	descricao VARCHAR(150),
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id),
-    primary key (id, fk_usuario)
+    primary key (id, fk_usuario),
+    estado INT
 );
 
 /*
