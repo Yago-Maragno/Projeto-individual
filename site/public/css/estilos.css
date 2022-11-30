@@ -3,7 +3,6 @@
     margin: 0;
     color: #DDBF42;
     font-family: sans-serif ;
-    /* padding-bottom: 30px; */
 }
 
 .header {
@@ -111,7 +110,7 @@ li a {
 
 video {
     position: absolute;
-    margin-top: -13%;
+    margin-top: -9%;
     margin-left: -18%;
     height: 50%;
     box-shadow: 0px 0px 20px 9px #DDBF42;
@@ -122,7 +121,7 @@ video {
     width: 550px;
     height: 310px;
     background-color: #6d6d6d;
-    margin-top: -30%;
+    margin-top: -27%;
     margin-left: 60%;
     overflow: hidden;
 }
@@ -167,6 +166,7 @@ video {
 .quemsomos img {
     width: 100%;
     opacity: 35%;
+    margin-top: 0%;
 }
 
 .descricao p {
@@ -196,7 +196,7 @@ video {
     height: 250px;
     width: 98.9vw;
     background-color: #000000be;
-    margin-top: 0%;
+    /* margin-top: 0%; */
 }
 
 

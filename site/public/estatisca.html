@@ -119,8 +119,8 @@
       console.log(resposta2)
       
       // Inserindo valores recebidos em estrutura para plotar o gráfico
-      for (i = 0; i < resposta2.length; i++) {
-          var registro = resposta2[i];
+      for (contador = 0; contador < resposta2.length; contador++) {
+          var registro = resposta2[contador];
           dados.datasets[0].data.push(registro.media);
       }
       
