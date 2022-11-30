@@ -197,7 +197,7 @@ body {
   align-items: stretch;
   border-bottom: 3px solid #CF7726;
   padding: 20px;
-  width: 50%;
+  width: 95%;
 }
 
 .publicacao > *:not(:last-child) {
@@ -213,6 +213,7 @@ body {
   background-color: #212124;
   border-radius: 5px;
   margin-bottom: 80px;
+  width: 60%;
 }
 
 .div-buttons {
