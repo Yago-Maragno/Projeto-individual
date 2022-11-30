@@ -139,7 +139,7 @@ body {
 }
 
 .dash-right .avisos .container .div-form #form_postagem {
-  width: 100%;
+  width: 70%;
 }
 
 .dash-right .avisos .div-form label {
@@ -148,13 +148,13 @@ body {
 }
 
 .dash-right .avisos .div-form input {
-  width: 50%;
+  width: 70%;
   border-radius: 5px;
   margin-left: 36%;
 }
 
 .dash-right .avisos .div-form textarea {
-  width: 100%;
+  width: 50%;
   border: 3px solid #CF7726;
   background-color: white;
   border-radius: 5px;
@@ -197,6 +197,7 @@ body {
   align-items: stretch;
   border-bottom: 3px solid #CF7726;
   padding: 20px;
+  width: 50%;
 }
 
 .publicacao > *:not(:last-child) {
